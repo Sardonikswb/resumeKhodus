@@ -1,0 +1,66 @@
+package by.khodus.entity;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import java.io.Serializable;
+
+@Entity
+@Table(name = "technologies")
+public class Technologies implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "gen_id_tech")
+    @SequenceGenerator(name = "gen_id_tech", sequenceName = "technologies_id_seq", allocationSize = 1)
+    @Column(name = "id", updatable = false, nullable = false)
+    private int id;
+
+    @NotNull
+    @Column(name = "technology")
+    private String technology;
+
+    @Column(name = "id_resume")
+    private int id_resume;
+
+    public Technologies() {
+    }
+
+    public Technologies(int id, String technology, int id_resume) {
+        this.id = id;
+        this.technology = technology;
+        this.id_resume = id_resume;
+    }
+
+    public Technologies(String technology, int id_resume) {
+        this.technology = technology;
+        this.id_resume = id_resume;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTechnology() {
+        return technology;
+    }
+
+    public void setTechnology(String technology) {
+        this.technology = technology;
+    }
+
+    public int getId_resume() {
+        return id_resume;
+    }
+
+    public void setId_resume(int id_resume) {
+        this.id_resume = id_resume;
+    }
+
+    @Override
+    public String toString() {
+        return technology;
+    }
+}
