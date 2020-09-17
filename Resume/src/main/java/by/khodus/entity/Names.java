@@ -27,20 +27,41 @@ public class Names implements Serializable {
     @OneToOne(optional = false, mappedBy = "names")
     public Resume resume;
 
-    public Names(int id, String name, String surename, String middle_name) {
-        this.id = id;
-        this.name = name;
-        this.surename = surename;
-        this.middle_name = middle_name;
-    }
+    public static class Builder {
+        private Names newNames;
 
-    public Names(String name, String surename, String middle_name) {
-        this.name = name;
-        this.surename = surename;
-        this.middle_name = middle_name;
-    }
+        public Builder() {
+            newNames = new Names();
+        }
 
-    public Names() {
+        public Builder withId(int id) {
+            newNames.id = id;
+            return this;
+        }
+
+        public Builder withSureName(String sureName) {
+            newNames.surename = sureName;
+            return this;
+        }
+
+        public Builder withName(String name) {
+            newNames.name = name;
+            return this;
+        }
+
+        public Builder withMiddleName(String middleName) {
+            newNames.middle_name = middleName;
+            return this;
+        }
+
+        public Builder withResume(Resume resume) {
+            newNames.resume = resume;
+            return this;
+        }
+
+        public Names build() {
+            return newNames;
+        }
     }
 
     public Resume getResume() {

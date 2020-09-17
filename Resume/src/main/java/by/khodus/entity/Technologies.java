@@ -21,18 +21,31 @@ public class Technologies implements Serializable {
     @Column(name = "id_resume")
     private int id_resume;
 
-    public Technologies() {
-    }
+    public static class Builder {
+        private Technologies newTechnologies;
 
-    public Technologies(int id, String technology, int id_resume) {
-        this.id = id;
-        this.technology = technology;
-        this.id_resume = id_resume;
-    }
+        public Builder() {
+            newTechnologies = new Technologies();
+        }
 
-    public Technologies(String technology, int id_resume) {
-        this.technology = technology;
-        this.id_resume = id_resume;
+        public Builder withId(int id) {
+            newTechnologies.id = id;
+            return this;
+        }
+
+        public Builder withTechnologies(String technologies) {
+            newTechnologies.technology = technologies;
+            return this;
+        }
+
+        public Builder withIdResume(int idResume) {
+            newTechnologies.id_resume = idResume;
+            return this;
+        }
+
+        public Technologies build() {
+            return newTechnologies;
+        }
     }
 
     public int getId() {

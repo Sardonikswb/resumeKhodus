@@ -33,12 +33,12 @@ public class ServiceTest {
 
     @Test
     public void checkAddTest() {
-        Names namesTest = new Names("name", "surename", "middle_name");
-        Contacts contactsTest = new Contacts("phone", "github", "email", "linkedin", "skype");
+        Names namesTest = new Names.Builder().withName("name").withSureName("surename").withMiddleName("middle_name").build();
+        Contacts contactsTest = new Contacts.Builder().withPhone("phone").withGithub("github").withEmail("email").withLinkedin("linkedin").withSkype("skype").build();
         namesRepository.saveAndFlush(namesTest);
         contactsRepository.saveAndFlush(contactsTest);
         int id = namesRepository.findIdNames();
-        Resume resumeTest = new Resume(id, "birthday", id, "gender", "technology");
+        Resume resumeTest = new Resume.Builder().withIdNames(id).withBirthday("birthday").withIdContacts(id).withGender("gender").withTechnology("technology").build();
         repository.saveAndFlush(resumeTest);
 
         List<Names> namesList = namesRepository.findAll();
@@ -50,21 +50,21 @@ public class ServiceTest {
 
     @Test
     public void checkEditTest() {
-        Names newNames = new Names("name", "surename", "middle_name");
-        Contacts newContacts = new Contacts("phone", "github", "email", "linkedin", "skype");
+        Names newNames = new Names.Builder().withName("name").withSureName("surename").withMiddleName("middle_name").build();
+        Contacts newContacts = new Contacts.Builder().withPhone("phone").withGithub("github").withEmail("email").withLinkedin("linkedin").withSkype("skype").build();
         contactsRepository.saveAndFlush(newContacts);
         namesRepository.saveAndFlush(newNames);
         int id = namesRepository.findIdNames();
-        Resume newResume = new Resume(id, id, "birthday", id, "female", "technology");
+        Resume newResume = new Resume.Builder().withId(id).withIdNames(id).withBirthday("birthday").withIdContacts(id).withGender("female").withTechnology("technology").build();
         repository.saveAndFlush(newResume);
 
         String name = "test";
         String email = "test";
         String gender = "test";
 
-        namesRepository.saveAndFlush(new Names(id, name, "surename", "middle_name"));
-        contactsRepository.saveAndFlush(new Contacts(id, "phone", "github", email, "linkedin", "skype"));
-        repository.saveAndFlush(new Resume(id, id, "birthday", id, gender, "technology"));
+        namesRepository.saveAndFlush(new Names.Builder().withId(id).withName(name).withSureName("surename").withMiddleName("middle_name").build());
+        contactsRepository.saveAndFlush(new Contacts.Builder().withId(id).withPhone("phone").withGithub("github").withEmail(email).withLinkedin("linkedin").withSkype("skype").build());
+        repository.saveAndFlush(new Resume.Builder().withId(id).withIdNames(id).withBirthday("birthday").withIdContacts(id).withGender(gender).withTechnology("technology").build());
 
         String nameTest = namesRepository.getById(id).get(0).getName();
         String emailTest = contactsRepository.getById(id).get(0).getEmail();
@@ -74,12 +74,12 @@ public class ServiceTest {
 
     @Test
     public void checkDeleteTest() {
-        Names namesTest = new Names("name", "surename", "middle_name");
-        Contacts contactsTest = new Contacts("phone", "github", "email", "linkedin", "skype");
+        Names namesTest = new Names.Builder().withName("name").withSureName("surename").withMiddleName("middle_name").build();
+        Contacts contactsTest = new Contacts.Builder().withPhone("phone").withGithub("github").withEmail("email").withLinkedin("linkedin").withSkype("skype").build();
         namesRepository.saveAndFlush(namesTest);
         contactsRepository.saveAndFlush(contactsTest);
         int id = namesRepository.findIdNames();
-        Resume resumeTest = new Resume(id, "birthday", id, "gender", "technology");
+        Resume resumeTest = new Resume.Builder().withIdNames(id).withBirthday("birthday").withIdContacts(id).withGender("gender").withTechnology("technology").build();
         repository.saveAndFlush(resumeTest);
 
         repository.delete(resumeTest);

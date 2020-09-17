@@ -46,10 +46,10 @@
                     <a href="${pageContext.request.contextPath}/update?idResume=${resume.id}&idNames=${resume.idNames}&idContacts=${resume.idContacts}">update</a>
                 </td>
                 <td>
-                    <form method="get" action="${pageContext.request.contextPath}/home?id=delete">
+                    <form method="post" action="${pageContext.request.contextPath}/home">
                         <input type="submit" value="${resume.id}" style="color: black"
                                class="btn btn-outline-secondary form-control"
-                               name="delete" id="delete" onclick=result()></form>
+                               name="delete" id="delete${resume.id}" onclick=result(${resume.id})></form>
                 </td>
                 <td>${resume.names}</td>
                 <td>${resume.birthday}</td>
@@ -65,7 +65,8 @@
         <p class="float-right">
             <a href="#">Back to top</a>
         </p>
-        <b>Проект разработан с применением технологий SPRING. База данных  - PostgresSQL. Визуальная часть - JSP. Простые тесты. </b>
+        <b>Проект разработан с применением технологий SPRING. База данных - PostgresSQL. Визуальная часть - JSP. Простые
+            тесты. </b>
     </div>
 </footer>
 </body>

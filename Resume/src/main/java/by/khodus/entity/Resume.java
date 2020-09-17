@@ -39,60 +39,56 @@ public class Resume implements Serializable {
     @Column(name = "technology")
     private String technology;
 
-    public Resume() {
-    }
+    public static class Builder {
+        private Resume newResume;
 
-    public Resume(int id, Names names, String birthday, Contacts contacts, String gender, String technology) {
-        this.id = id;
-        this.names = names;
-        this.birthday = birthday;
-        this.contacts = contacts;
-        this.gender = gender;
-        this.technology = technology;
-    }
+        public Builder() {
+            newResume = new Resume();
+        }
 
-    public Resume(Names names, String birthday, Contacts contacts, String gender, String technology) {
-        this.names = names;
-        this.birthday = birthday;
-        this.contacts = contacts;
-        this.gender = gender;
-        this.technology = technology;
-    }
+        public Builder withId(int id) {
+            newResume.id = id;
+            return this;
+        }
 
-    public Resume(int idNames, String birthday, int idContacts, String gender, String technology) {
-        this.idNames = idNames;
-        this.names = names;
-        this.birthday = birthday;
-        this.idContacts = idContacts;
-        this.gender = gender;
-        this.technology = technology;
-    }
+        public Builder withNames(Names names) {
+            newResume.names = names;
+            return this;
+        }
 
-    public Resume(int idNames, String birthday, int idContacts, String gender) {
-        this.idNames = idNames;
-        this.names = names;
-        this.birthday = birthday;
-        this.idContacts = idContacts;
-        this.gender = gender;
-    }
+        public Builder withIdNames(int idNames) {
+            newResume.idNames = idNames;
+            return this;
+        }
 
-    public Resume(int id, int idNames, String birthday, int idContacts, String gender, String technology) {
-        this.id = id;
-        this.idNames = idNames;
-        this.names = names;
-        this.birthday = birthday;
-        this.idContacts = idContacts;
-        this.gender = gender;
-        this.technology = technology;
-    }
+        public Builder withBirthday(String birthday) {
+            newResume.birthday = birthday;
+            return this;
+        }
 
-    public Resume(int id, int idNames, String birthday, int idContacts, String gender) {
-        this.id = id;
-        this.idNames = idNames;
-        this.names = names;
-        this.birthday = birthday;
-        this.idContacts = idContacts;
-        this.gender = gender;
+        public Builder withContacts(Contacts contacts) {
+            newResume.contacts = contacts;
+            return this;
+        }
+
+        public Builder withIdContacts(int idContacts) {
+            newResume.idContacts = idContacts;
+            return this;
+        }
+
+        public Builder withGender(String gender) {
+            newResume.gender = gender;
+            return this;
+        }
+
+        public Builder withTechnology(String technology) {
+            newResume.technology = technology;
+            return this;
+        }
+
+        public Resume build() {
+            return newResume;
+        }
     }
 
     public void setContacts(Contacts contacts) {

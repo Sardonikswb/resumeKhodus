@@ -60,7 +60,7 @@ public class UpdateController {
             middle_name = namesService.findById(idNam).getMiddle_name();
         }
         if (birthday.equals("")) {
-            birthday = birthday = resumeService.findById(idRes).getBirthday();
+            birthday = resumeService.findById(idRes).getBirthday();
         }
         if (phone.equals("")) {
             phone = contactsService.findById(idCont).getPhone();
@@ -82,33 +82,33 @@ public class UpdateController {
         }
         technologiesService.delete(idRes);
         if (args.containsKey("Git")) {
-            technologiesService.save(new Technologies(args.get("Git"), idRes));
+            technologiesService.save(new Technologies.Builder().withTechnologies(args.get("Git")).withIdResume(idRes).build());
         }
         if (args.containsKey("HTML")) {
-            technologiesService.save(new Technologies(args.get("HTML"), idRes));
+            technologiesService.save(new Technologies.Builder().withTechnologies(args.get("HTML")).withIdResume(idRes).build());
         }
         if (args.containsKey("JavaEE")) {
-            technologiesService.save(new Technologies(args.get("JavaEE"), idRes));
+            technologiesService.save(new Technologies.Builder().withTechnologies(args.get("JavaEE")).withIdResume(idRes).build());
         }
         if (args.containsKey("Java Core")) {
-            technologiesService.save(new Technologies(args.get("Java Core"), idRes));
+            technologiesService.save(new Technologies.Builder().withTechnologies(args.get("Java Core")).withIdResume(idRes).build());
         }
         if (args.containsKey("Spring Boot")) {
-            technologiesService.save(new Technologies(args.get("Spring Boot"), idRes));
+            technologiesService.save(new Technologies.Builder().withTechnologies(args.get("Spring Boot")).withIdResume(idRes).build());
         }
         if (args.containsKey("Spring")) {
-            technologiesService.save(new Technologies(args.get("Spring"), idRes));
+            technologiesService.save(new Technologies.Builder().withTechnologies(args.get("Spring")).withIdResume(idRes).build());
         }
         if (args.containsKey("Maven")) {
-            technologiesService.save(new Technologies(args.get("Maven"), idRes));
+            technologiesService.save(new Technologies.Builder().withTechnologies(args.get("Maven")).withIdResume(idRes).build());
         }
         if (args.containsKey("REST")) {
-            technologiesService.save(new Technologies(args.get("REST"), idRes));
+            technologiesService.save(new Technologies.Builder().withTechnologies(args.get("REST")).withIdResume(idRes).build());
         }
 
-        namesService.save(new Names(idNam, name, surename, middle_name));
-        contactsService.save(new Contacts(idCont, phone, github, email, linkedin, skype));
-        resumeService.save(new Resume(idRes, idNam, birthday, idCont, gender));
+        namesService.save(new Names.Builder().withId(idNam).withName(name).withSureName(surename).withMiddleName(middle_name).build());
+        contactsService.save(new Contacts.Builder().withId(idCont).withPhone(phone).withGithub(github).withEmail(email).withLinkedin(linkedin).withSkype(skype).build());
+        resumeService.save(new Resume.Builder().withId(idRes).withIdNames(idNam).withBirthday(birthday).withIdContacts(idCont).withGender(gender).build());
 
         return "redirect:home";
 

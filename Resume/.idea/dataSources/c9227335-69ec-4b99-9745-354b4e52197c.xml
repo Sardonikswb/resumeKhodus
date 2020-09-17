@@ -19,8 +19,8 @@
       <Owner>postgres</Owner>
       <IntrospectionStateNumber>2339</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|17285|17287|1
-sequence|table|17263|17265|1
+      <Relations>sequence|table|17263|17265|1
+sequence|table|17285|17287|1
 sequence|table|17274|17276|1
 sequence|table|17604|17606|1
 </Relations>

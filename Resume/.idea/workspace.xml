@@ -133,9 +133,9 @@
       <recent name="C:\Users\Dell\IdeaProjects\Resume\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ServiceTest.checkAddTest">
+  <component name="RunManager" selected="Spring Boot.Unnamed">
     <configuration name="ServiceTest.checkAddTechnologyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Resume" />
+      <module name="ResumeWithBuilderV1.2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="by.khodus.service.*" />
@@ -151,7 +151,7 @@
       </method>
     </configuration>
     <configuration name="ServiceTest.checkAddTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Resume" />
+      <module name="ResumeWithBuilderV1.2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="by.khodus.service.*" />
@@ -167,7 +167,7 @@
       </method>
     </configuration>
     <configuration name="ServiceTest.checkDeleteTechnologyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Resume" />
+      <module name="ResumeWithBuilderV1.2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="by.khodus.service.*" />
@@ -183,7 +183,7 @@
       </method>
     </configuration>
     <configuration name="ServiceTest.checkListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Resume" />
+      <module name="ResumeWithBuilderV1.2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="by.khodus.service.*" />
@@ -199,7 +199,7 @@
       </method>
     </configuration>
     <configuration name="ServiceTest.checkUpdateTechnologyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Resume" />
+      <module name="ResumeWithBuilderV1.2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="by.khodus.service.*" />
@@ -215,7 +215,7 @@
       </method>
     </configuration>
     <configuration name="Unnamed" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="Resume" />
+      <module name="ResumeWithBuilderV1.2" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="by.khodus.Application" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
@@ -301,9 +301,9 @@
       <item itemvalue="JUnit.ServiceTest.checkAddTechnologyTest" />
       <item itemvalue="JUnit.ServiceTest.checkDeleteTechnologyTest" />
       <item itemvalue="JUnit.ServiceTest.checkUpdateTechnologyTest" />
+      <item itemvalue="JUnit.ServiceTest.checkAddTest" />
       <item itemvalue="Spring Boot.Unnamed" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.29" />
-      <item itemvalue="JUnit.ServiceTest.checkAddTest" />
     </list>
     <recent_temporary>
       <list>
@@ -441,7 +441,24 @@
       <workItem from="1600166319414" duration="1786000" />
       <workItem from="1600168131616" duration="1787000" />
       <workItem from="1600170456878" duration="1787000" />
-      <workItem from="1600172266802" duration="235000" />
+      <workItem from="1600172266802" duration="1187000" />
+      <workItem from="1600174198028" duration="5000" />
+      <workItem from="1600175419657" duration="637000" />
+      <workItem from="1600176080502" duration="826000" />
+      <workItem from="1600177898889" duration="1115000" />
+      <workItem from="1600265515436" duration="983000" />
+      <workItem from="1600267508372" duration="1769000" />
+      <workItem from="1600269319196" duration="176000" />
+      <workItem from="1600271968910" duration="1783000" />
+      <workItem from="1600273783181" duration="1162000" />
+      <workItem from="1600281906349" duration="1265000" />
+      <workItem from="1600347616295" duration="1774000" />
+      <workItem from="1600349426911" duration="910000" />
+      <workItem from="1600351622853" duration="1783000" />
+      <workItem from="1600353766344" duration="1885000" />
+      <workItem from="1600358693018" duration="1778000" />
+      <workItem from="1600368048812" duration="1781000" />
+      <workItem from="1600369858859" duration="296000" />
     </task>
     <servers />
   </component>
@@ -449,54 +466,66 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1237" height="123" key="GridCell.Tab.0.bottom" timestamp="1600171466231">
+    <state x="233" y="0" key="#Template_Data_Languages" timestamp="1600368418012">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="123" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600171466231" />
-    <state width="1237" height="123" key="GridCell.Tab.0.center" timestamp="1600171466231">
+    <state x="233" y="0" key="#Template_Data_Languages/0.0.1280.680@0.0.1280.680" timestamp="1600368418012" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600370147535">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="123" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1600171466231" />
-    <state width="1237" height="123" key="GridCell.Tab.0.left" timestamp="1600171466231">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1600370147535" />
+    <state x="446" y="56" key="#com.intellij.ide.util.MemberChooser" timestamp="1600282124251">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="123" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1600171466231" />
-    <state width="1237" height="123" key="GridCell.Tab.0.right" timestamp="1600171466231">
+    <state x="446" y="56" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1600282124251" />
+    <state width="1237" height="233" key="GridCell.Tab.0.bottom" timestamp="1600369555320">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="123" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1600171466231" />
-    <state width="1237" height="123" key="GridCell.Tab.1.bottom" timestamp="1600171466231">
+    <state width="1237" height="233" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600369555320" />
+    <state width="1237" height="233" key="GridCell.Tab.0.center" timestamp="1600369555320">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="123" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600171466231" />
-    <state width="1237" height="123" key="GridCell.Tab.1.center" timestamp="1600171466231">
+    <state width="1237" height="233" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1600369555320" />
+    <state width="1237" height="233" key="GridCell.Tab.0.left" timestamp="1600369555320">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="123" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1600171466231" />
-    <state width="1237" height="123" key="GridCell.Tab.1.left" timestamp="1600171466231">
+    <state width="1237" height="233" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1600369555320" />
+    <state width="1237" height="233" key="GridCell.Tab.0.right" timestamp="1600369555320">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="123" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1600171466231" />
-    <state width="1237" height="123" key="GridCell.Tab.1.right" timestamp="1600171466231">
+    <state width="1237" height="233" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1600369555320" />
+    <state width="1237" height="233" key="GridCell.Tab.1.bottom" timestamp="1600369573494">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="123" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1600171466231" />
-    <state width="1237" height="146" key="GridCell.Tab.2.bottom" timestamp="1600167473778">
+    <state width="1237" height="233" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600369573494" />
+    <state width="1237" height="233" key="GridCell.Tab.1.center" timestamp="1600369573494">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="146" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600167473778" />
-    <state width="1237" height="146" key="GridCell.Tab.2.center" timestamp="1600167473778">
+    <state width="1237" height="233" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1600369573494" />
+    <state width="1237" height="233" key="GridCell.Tab.1.left" timestamp="1600369573494">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="146" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1600167473778" />
-    <state width="1237" height="146" key="GridCell.Tab.2.left" timestamp="1600167473778">
+    <state width="1237" height="233" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1600369573494" />
+    <state width="1237" height="233" key="GridCell.Tab.1.right" timestamp="1600369573494">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="146" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1600167473778" />
-    <state width="1237" height="146" key="GridCell.Tab.2.right" timestamp="1600167473778">
+    <state width="1237" height="233" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1600369573494" />
+    <state width="1237" height="233" key="GridCell.Tab.2.bottom" timestamp="1600369555210">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="146" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1600167473778" />
+    <state width="1237" height="233" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600369555210" />
+    <state width="1237" height="233" key="GridCell.Tab.2.center" timestamp="1600369555210">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="233" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1600369555210" />
+    <state width="1237" height="233" key="GridCell.Tab.2.left" timestamp="1600369555210">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="233" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1600369555210" />
+    <state width="1237" height="233" key="GridCell.Tab.2.right" timestamp="1600369555210">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="233" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1600369555210" />
     <state x="121" y="0" key="SettingsEditor" timestamp="1599375425277">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

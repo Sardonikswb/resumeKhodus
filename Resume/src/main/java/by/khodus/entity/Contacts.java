@@ -33,24 +33,51 @@ public class Contacts implements Serializable {
     @OneToOne(optional = false, mappedBy = "contacts")
     public Resume resume;
 
-    public Contacts(int id, String phone, String github, String email, String linkedin, String skype) {
-        this.id = id;
-        this.phone = phone;
-        this.github = github;
-        this.email = email;
-        this.linkedin = linkedin;
-        this.skype = skype;
-    }
+    public static class Builder {
+        private Contacts newContacts;
 
-    public Contacts(String phone, String github, String email, String linkedin, String skype) {
-        this.phone = phone;
-        this.github = github;
-        this.email = email;
-        this.linkedin = linkedin;
-        this.skype = skype;
-    }
+        public Builder() {
+            newContacts = new Contacts();
+        }
 
-    public Contacts() {
+        public Builder withId(int id) {
+            newContacts.id = id;
+            return this;
+        }
+
+        public Builder withPhone(String phone) {
+            newContacts.phone = phone;
+            return this;
+        }
+
+        public Builder withGithub(String github) {
+            newContacts.github = github;
+            return this;
+        }
+
+        public Builder withEmail(String email) {
+            newContacts.email = email;
+            return this;
+        }
+
+        public Builder withSkype(String skype) {
+            newContacts.skype = skype;
+            return this;
+        }
+
+        public Builder withLinkedin(String linkedin) {
+            newContacts.linkedin = linkedin;
+            return this;
+        }
+
+        public Builder withResume(Resume resume) {
+            newContacts.resume = resume;
+            return this;
+        }
+
+        public Contacts build() {
+            return newContacts;
+        }
     }
 
     public Resume getResume() {

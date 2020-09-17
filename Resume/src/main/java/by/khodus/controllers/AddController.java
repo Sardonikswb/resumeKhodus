@@ -42,36 +42,36 @@ public class AddController {
                             @RequestParam String github, @RequestParam String email, @RequestParam String linkedin, @RequestParam String skype, @RequestParam String gender,
                             @RequestParam Map<String, String> args) {
 
-        namesService.save(new Names(name, surename, middle_name));
-        contactsService.save(new Contacts(phone, github, email, linkedin, skype));
+        namesService.save(new Names.Builder().withName(name).withSureName(surename).withMiddleName(middle_name).build());
+        contactsService.save(new Contacts.Builder().withPhone(phone).withGithub(github).withEmail(email).withLinkedin(linkedin).withSkype(skype).build());
         int idNames = namesService.findIdNames();
         int idContacts = contactsService.findIdContacts();
 
         if (args.containsKey("Git")) {
-            technologiesService.save(new Technologies(args.get("Git"), idNames));
+            technologiesService.save(new Technologies.Builder().withTechnologies(args.get("Git")).withIdResume(idNames).build());
         }
         if (args.containsKey("HTML")) {
-            technologiesService.save(new Technologies(args.get("HTML"), idNames));
+            technologiesService.save(new Technologies.Builder().withTechnologies(args.get("HTML")).withIdResume(idNames).build());
         }
         if (args.containsKey("JavaEE")) {
-            technologiesService.save(new Technologies(args.get("JavaEE"), idNames));
+            technologiesService.save(new Technologies.Builder().withTechnologies(args.get("JavaEE")).withIdResume(idNames).build());
         }
         if (args.containsKey("Java Core")) {
-            technologiesService.save(new Technologies(args.get("Java Core"), idNames));
+            technologiesService.save(new Technologies.Builder().withTechnologies(args.get("Java Core")).withIdResume(idNames).build());
         }
         if (args.containsKey("Spring Boot")) {
-            technologiesService.save(new Technologies(args.get("Spring Boot"), idNames));
+            technologiesService.save(new Technologies.Builder().withTechnologies(args.get("Spring Boot")).withIdResume(idNames).build());
         }
         if (args.containsKey("Spring")) {
-            technologiesService.save(new Technologies(args.get("Spring"), idNames));
+            technologiesService.save(new Technologies.Builder().withTechnologies(args.get("Spring")).withIdResume(idNames).build());
         }
         if (args.containsKey("Maven")) {
-            technologiesService.save(new Technologies(args.get("Maven"), idNames));
+            technologiesService.save(new Technologies.Builder().withTechnologies(args.get("Maven")).withIdResume(idNames).build());
         }
         if (args.containsKey("REST")) {
-            technologiesService.save(new Technologies(args.get("REST"), idNames));
+            technologiesService.save(new Technologies.Builder().withTechnologies(args.get("REST")).withIdResume(idNames).build());
         }
-        resumeService.save(new Resume(idNames, birthday, idContacts, gender));
+        resumeService.save(new Resume.Builder().withIdNames(idNames).withBirthday(birthday).withIdContacts(idContacts).withGender(gender).build());
 
         return "redirect:home";
     }
